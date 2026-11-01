@@ -1,0 +1,11 @@
+[package]
+name = "vm_warp"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+vm_core = { path = "../vm_core" }
+vm_proyecto = { path = "../vm_proyecto" }
+vm_composicion = { path = "../vm_composicion" }
+vm_output = { path = "../vm_output" }

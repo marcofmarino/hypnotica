@@ -1,0 +1,23 @@
+[package]
+name = "vm_ui"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+bevy_egui = { workspace = true }
+rfd = { workspace = true }
+vm_warp = { path = "../vm_warp" }
+vm_composicion = { path = "../vm_composicion" }
+vm_core = { path = "../vm_core" }
+vm_output = { path = "../vm_output" }
+vm_proyecto = { path = "../vm_proyecto" }
+egui-phosphor = { workspace = true }
+vm_video = { path = "../vm_video" }
+vm_audio = { path = "../vm_audio" }
+vm_control = { path = "../vm_control" }
+
+[dev-dependencies]
+# Solo para pruebas: dibuja la interfaz a una imagen sin ventana, para poder VERLA (mismo
+# número de versión que el `egui` de Bevy; no entra en el programa).
+egui_kittest = { version = "=0.36.2", features = ["wgpu", "snapshot"] }

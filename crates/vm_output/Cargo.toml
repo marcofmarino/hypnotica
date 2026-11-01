@@ -1,0 +1,9 @@
+[package]
+name = "vm_output"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+vm_core = { path = "../vm_core" }
+vm_proyecto = { path = "../vm_proyecto" }

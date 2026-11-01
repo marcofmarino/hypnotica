@@ -1,0 +1,28 @@
+[workspace]
+resolver = "3"
+members = ["app", "crates/vm_control", "crates/vm_audio", "crates/vm_ui", "crates/vm_composicion", "crates/vm_core", "crates/vm_proyecto", "crates/vm_video", "crates/vm_warp", "crates/vm_output"]
+
+# Versiones declaradas una sola vez; cada crate las pide con `workspace = true`.
+[workspace.dependencies]
+bevy = { version = "=0.20.0" }
+bevy_egui = "0.43.1"
+gstreamer = "0.25.4"
+gstreamer-app = "0.25.2"
+gstreamer-video = "0.25.4"
+rfd = "0.17.2"
+egui-phosphor = "0.14.0"
+# Portales XDG (captura de pantalla y ventanas). `async-io` evita traer `tokio`.
+ashpd = { version = "0.13.13", default-features = false, features = ["async-io", "screencast"] }
+pollster = "0.4"
+# Para leer la lista de aplicaciones que suenan (`pw-dump`).
+serde_json = "1"
+# Mensajes OSC (control desde un celular u otros programas): decodificar y codificar.
+rosc = "0.11"
+# Entrada MIDI (controladores con perillas y botones): puertos y mensajes.
+midir = "0.11"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3

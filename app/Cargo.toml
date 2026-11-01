@@ -1,0 +1,22 @@
+[package]
+name = "hypnotica"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+vm_video = { path = "../crates/vm_video" }
+vm_audio = { path = "../crates/vm_audio" }
+vm_control = { path = "../crates/vm_control" }
+vm_composicion = { path = "../crates/vm_composicion" }
+vm_warp = { path = "../crates/vm_warp" }
+vm_output = { path = "../crates/vm_output" }
+vm_proyecto = { path = "../crates/vm_proyecto" }
+vm_ui = { path = "../crates/vm_ui" }
+
+[features]
+# `dynamic_linking` acelera la compilación en desarrollo, pero el ejecutable queda atado a
+# librerías de `target/`. Está activada por defecto para `cargo run`; para un ejecutable
+# independiente (release, Flatpak) se compila con `--no-default-features`.
+default = ["dynamic_linking"]
+dynamic_linking = ["bevy/dynamic_linking"]

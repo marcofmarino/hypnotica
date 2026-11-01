@@ -1,0 +1,13 @@
+[package]
+name = "vm_audio"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+gstreamer = { workspace = true }
+gstreamer-app = { workspace = true }
+vm_core = { path = "../vm_core" }
+vm_composicion = { path = "../vm_composicion" }
+vm_proyecto = { path = "../vm_proyecto" }
+vm_video = { path = "../vm_video" }

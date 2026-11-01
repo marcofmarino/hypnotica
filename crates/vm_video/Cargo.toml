@@ -1,0 +1,17 @@
+[package]
+name = "vm_video"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+gstreamer = { workspace = true }
+gstreamer-app = { workspace = true }
+gstreamer-video = { workspace = true }
+ashpd = { workspace = true }
+pollster = { workspace = true }
+serde_json = { workspace = true }
+# Captura por DMA-BUF (sin pasar por la CPU, ver `dmabuf.rs`). `wgpu` es la misma versión que
+# usa Bevy (ya estaba en el Cargo.lock); `gstreamer-allocators` lee el descriptor del buffer.
+wgpu = { version = "30", default-features = false, features = ["vulkan"] }
+gstreamer-allocators = "0.25"

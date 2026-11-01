@@ -1,0 +1,12 @@
+[package]
+name = "vm_control"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+rosc = { workspace = true }
+midir = { workspace = true }
+vm_core = { path = "../vm_core" }
+vm_composicion = { path = "../vm_composicion" }
+vm_proyecto = { path = "../vm_proyecto" }
